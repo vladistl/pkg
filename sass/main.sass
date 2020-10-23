@@ -22,8 +22,8 @@
 
 @media screen and (max-width: 1170px) 
     .container 
-        padding-left: undefined
-        padding-right: undefined
+        padding-left: 46px
+        padding-right: 46px
 
 @media screen and (max-width: 960px) 
     .container 
@@ -368,6 +368,8 @@ input[type="radio"]:checked + label:after
             line-height: 22px
             /* identical to box height */
             color: #D0D0D0
+        
+
         &:focus
             outline: none
             border: 1px solid #8BC1FB
@@ -822,9 +824,9 @@ header.header
         margin-bottom: 36px
     .advantages-items
         padding: 24px
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-between
+        display: grid
+        grid-template-columns: repeat(4, minmax(220px, 1fr))
+        gap: 25px
         .advantages-item
             display: block
             padding: 32px 26px
@@ -1085,6 +1087,16 @@ header.header
                     height: 40px
                     &::placeholder
                         color: #696B6F
+                    &::-webkit-input-placeholder
+                        line-height: 40px
+                        
+                    &:-moz-placeholder
+                        line-height: 40px
+                    &::-moz-placeholder 
+                        line-height: 40px
+                        
+                    &:-ms-input-placeholder  
+                        line-height: 40px
                 .btn-blue
                     height: 40px
                     min-width: 165px
@@ -1600,13 +1612,17 @@ table
     .production-item__arrow
         width: 107px
         height: 107px
-        right: -45px
-        bottom: -55px
+        right: -42px
+        bottom: -43px
         display: block
         svg
             position: absolute
             top: 18px
             left: 24px
+    .production-item__arrow__light
+        right: 11px
+        bottom: 37px
+
     .section-advantages-company .container
         border-radius: 0
     .section-advantages-company .container
@@ -1664,11 +1680,17 @@ table
         width: 10px
         height: 5px
     .section-block .block-top-text
-        font-size: 14px
+        font-size: 13px
         line-height: 14px 
+        margin-bottom: 19px
+        padding-left: 37px
+    .section-block .block-top-text::before
+        width: 18px
+        height: 1px
     .section-block .block-top-name
-        font-size: 32px
-        line-height: 32px 
+        font-size: 25px
+        line-height: 25px 
+        margin-bottom: 39px
     .about-company
         justify-content: space-between
     .about-company__big-text
@@ -1795,16 +1817,23 @@ table
             transform: translateX(30%)
     .design-company-description
         gap: 16px
+    .section-advantages-company .container
+        padding-top: 59px
+        padding-bottom: 82px
     .section-advantages-company .advantages-items .advantages-item__name
         font-size: 18px
         line-height: 22px
+        margin-top: 2px
+        margin-bottom: 0px
+    .section-advantages-company .advantages-items .advantages-item p
+        margin-top: 8px
+        line-height: 21px
     
-    .section-advantages-company .advantages-items
-        display: grid
-        grid-template-columns: 1fr 1fr   
-        gap: 17px
+    .section-advantages-company .advantages-items 
+        gap: 16px
     .section-advantages-company .advantages-items .advantages-item
         max-width: unset
+        padding-bottom: 16px
     .news-items .new-item, .achieve-items .achieve-item
         box-shadow: 5px 10px 10px rgba(229, 233, 246, 0.4)
     .news-items .new-item__name
@@ -1950,6 +1979,10 @@ table
             width: 100% 
     .btn-circle-up
         display: none
+
+@media screen and (max-width: 998px) 
+    .section-advantages-company .advantages-items
+        grid-template-columns: repeat(2, minmax(220px, 1fr))
 @media screen and (max-width: 780px) 
     .btn-blue
         font-size: 12px
@@ -2089,7 +2122,8 @@ table
     .modal-zz .modal-inside-window .desc-modal
         font-size: 14px
         line-height: 21px
-
+    .slider-to-main .wrap-arrows
+        padding: 0
         
 @media screen and (max-width: 640px) 
     .section-news-company.page-list .news-items
@@ -2201,8 +2235,8 @@ table
 
 @media screen and (max-width: 1170px) 
     .section-advantages-company .container 
-        padding-left: 18px
-        padding-right: 18px
+        padding-left: 46px
+        padding-right: 46px
 
 @media screen and (max-width: 960px) 
     .section-advantages-company .container 
